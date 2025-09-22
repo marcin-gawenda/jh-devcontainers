@@ -52,11 +52,11 @@ spring:
           - git-version=${git.commit.id.describe:}
           - git-commit=${git.commit.id.abbrev:}
           - git-branch=${git.branch:}
-      host: localhost
+      host: consul
       port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/jhDevcontainers
+    url: jdbc:postgresql://postgresql:5432/jhDevcontainers
     username: jhDevcontainers
     password:
     hikari:

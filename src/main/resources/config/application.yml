@@ -119,7 +119,7 @@ spring:
         binder:
           replicationFactor: 1
           auto-create-topics: true
-          brokers: localhost:9092
+          brokers: kafka:9092
       bindings:
         binding-out-0:
           content-type: text/plain
@@ -133,7 +133,7 @@ spring:
           group: jh-devcontainers
   docker:
     compose:
-      enabled: true
+      enabled: false
       lifecycle-management: start-only
       file: src/main/docker/postgresql.yml
   profiles:
@@ -187,7 +187,7 @@ spring:
       client:
         provider:
           oidc:
-            issuer-uri: http://localhost:9080/realms/jhipster
+            issuer-uri: http://keycloak:9080/realms/jhipster
         registration:
           oidc:
             client-id: internal

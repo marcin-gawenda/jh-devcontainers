@@ -69,6 +69,7 @@ public class JhDevcontainersApp {
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
+        LOG.warn("Hello from devcontainers!");
     }
 
     private static void logApplicationStartup(Environment env) {
